@@ -13,7 +13,7 @@ public static class AssemblyExtensions
     #region Static Methods
     internal static IEnumerable<Assembly> GetAssemblies(Predicate<string>? filter = null, params string[] externalDirectories)
     {
-        if(_assemblyCache is not null)
+        if (_assemblyCache is not null)
         {
             return _assemblyCache;
         }
@@ -49,6 +49,27 @@ public static class AssemblyExtensions
 
             return false;
         }
+    }
+
+    public static string? GetExecutingAssemblyDirectory()
+    {
+        var executingAssemblyPath = Assembly.GetExecutingAssembly().Location;
+
+        var executingAssemblyDirectory = Path.GetDirectoryName(executingAssemblyPath);
+
+        return executingAssemblyDirectory;
+    }
+
+    public static string[] AddExecutingAssemblyDirectory(this string[] assemblyDirectories)
+    {
+        var executingAssemblyDirectory = GetExecutingAssemblyDirectory();
+
+        if (Directory.Exists(executingAssemblyDirectory))
+        {
+            assemblyDirectories = [.. assemblyDirectories, executingAssemblyDirectory];
+        }
+
+        return assemblyDirectories;
     }
     #endregion
 }
