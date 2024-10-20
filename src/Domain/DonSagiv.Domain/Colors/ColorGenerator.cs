@@ -9,7 +9,7 @@ public static class ColorGenerator
     #endregion
 
     #region Fields
-    private static readonly Random _random = new Random();
+    private static readonly Random _random = new();
     private static int _colorIndex;
     private static ColorInfo _currentColor;
     private static readonly IList<ColorInfo> _colorList =

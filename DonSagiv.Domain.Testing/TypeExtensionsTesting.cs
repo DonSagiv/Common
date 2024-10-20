@@ -3,7 +3,7 @@
 public class TypeExtensionsTesting
 {
     [Theory]
-    [InlineData(typeof(TestImplementation), typeof(ITestInterface)))]
+    [InlineData(typeof(TestImplementation), typeof(ITestInterface))]
     public void Implements_Should_ReturnTrueIfCompatible(Type derivedType, Type baseType)
     {
         // Act
@@ -15,16 +15,16 @@ public class TypeExtensionsTesting
 
 public interface ITestInterface
 {
-    public string foo { get; set; }
+    public string Foo { get; set; }
 }
 
 public abstract class TestBase
 {
-    public int bar { get; set; }
+    public int Bar { get; set; }
 }
 
 public class TestImplementation : TestBase, ITestInterface
 {
-    public string foo { get; set; }
-    public int bar { get; set; }
+    public string Foo { get; set; }
+    public int Bar { get; set; }
 }

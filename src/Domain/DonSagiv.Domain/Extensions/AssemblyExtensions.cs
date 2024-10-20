@@ -6,7 +6,7 @@ namespace DonSagiv.Domain.Extensions;
 public static class AssemblyExtensions
 {
     #region Static Fields
-    public static Predicate<string>? _defaultFilter = null;
+    private static Predicate<string>? _defaultFilter = null;
     private static Assembly[]? _assemblyCache = null;
     #endregion
 

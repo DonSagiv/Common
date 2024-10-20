@@ -11,7 +11,7 @@ namespace DonSagiv.Domain.DomainEvents;
 internal class DomainEventPublisher : IDomainEventPublisher
 {
     #region Fields
-    private readonly object _syncObject = new object();
+    private readonly object _syncObject = new();
     private readonly Subject<Unit> _domainEventEnqueueSubject = new();
     private readonly IPublisher _publisher;
     private readonly ConcurrentQueue<INotification> _domainEventQueue;

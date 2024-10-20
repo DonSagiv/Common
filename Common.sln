@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{5316F2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonSagiv.Domain.Testing", "DonSagiv.Domain.Testing\DonSagiv.Domain.Testing.csproj", "{03870B1A-F1FD-4F59-8348-3ABCDA98EF46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonSagiv.Appl", "DonSagiv.Appl\DonSagiv.Appl.csproj", "{C0E54793-C3C0-42CA-BB47-E4C200C5F8C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{03870B1A-F1FD-4F59-8348-3ABCDA98EF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03870B1A-F1FD-4F59-8348-3ABCDA98EF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03870B1A-F1FD-4F59-8348-3ABCDA98EF46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E54793-C3C0-42CA-BB47-E4C200C5F8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E54793-C3C0-42CA-BB47-E4C200C5F8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E54793-C3C0-42CA-BB47-E4C200C5F8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E54793-C3C0-42CA-BB47-E4C200C5F8C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +53,7 @@ Global
 		{B2E50628-827E-49DE-B407-542AD4C76FFE} = {EBFD25D3-A03E-424C-8119-597203A2EBA9}
 		{5316F267-62E4-445C-9CA2-6D6A1DBFED26} = {987369C1-4BE4-4A8C-A222-679B2A72E7EC}
 		{03870B1A-F1FD-4F59-8348-3ABCDA98EF46} = {5316F267-62E4-445C-9CA2-6D6A1DBFED26}
+		{C0E54793-C3C0-42CA-BB47-E4C200C5F8C8} = {B40C785C-70B2-45ED-94F9-E0AD4C7B0895}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CDDAF75-480A-455F-B796-B02F72D17D69}

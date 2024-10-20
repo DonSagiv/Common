@@ -3,19 +3,12 @@ using System.Text;
 
 namespace DonSagiv.Domain.Colors;
 
-public readonly record struct ColorInfo(byte a, byte r, byte g, byte b)
+public readonly record struct ColorInfo(byte A, byte R, byte G, byte B)
 {
     #region Magic Numbers
     private const double _redLumCoeff = 0.2126;
     private const double _greenLumCoeff = 0.7152;
     private const double _blueLumCoeff = 0.0722;
-    #endregion
-
-    #region Properties
-    public byte A { get; } = a;
-    public byte R { get; } = r;
-    public byte G { get; } = g;
-    public byte B { get; } = b;
     #endregion
 
     #region Constructor
@@ -27,7 +20,7 @@ public readonly record struct ColorInfo(byte a, byte r, byte g, byte b)
     {
         var sb = new StringBuilder();
 
-        sb.Append("#");
+        sb.Append('#');
         sb.Append(A.ToString("X2"));
         sb.Append(R.ToString("X2"));
         sb.Append(G.ToString("X2"));
@@ -40,7 +33,7 @@ public readonly record struct ColorInfo(byte a, byte r, byte g, byte b)
     {
         var sb = new StringBuilder();
 
-        sb.Append("#");
+        sb.Append('#');
         sb.Append(R.ToString("X2"));
         sb.Append(G.ToString("X2"));
         sb.Append(B.ToString("X2"));
@@ -48,22 +41,22 @@ public readonly record struct ColorInfo(byte a, byte r, byte g, byte b)
         return sb.ToString();
     }
 
-    public (byte a, byte r, byte b, byte g) toArgb()
+    public (byte a, byte r, byte b, byte g) ToArgb()
     {
-        return (a, r, g, b);
+        return (A, R, G, B);
     }
 
-    public (byte r, byte b, byte g) toRgb()
+    public (byte r, byte b, byte g) ToRgb()
     {
-        return (r, g, b);
+        return (R, G, B);
     }
 
-    public int encode()
+    public int Encode()
     {
-        var colorData = a << 24;
-        colorData |= r << 16;
-        colorData |= g << 8;
-        colorData |= b << 0;
+        var colorData = A << 24;
+        colorData |= R << 16;
+        colorData |= G << 8;
+        colorData |= B << 0;
 
         return colorData;
     }
