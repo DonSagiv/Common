@@ -108,7 +108,7 @@ public static class ColorGenerator
             LightnessFilter.Bright => (0.7, 0.9),
             LightnessFilter.Medium => (0.5, 0.7),
             LightnessFilter.Dark => (0.3, 0.5),
-            _ => throw new NotImplementedException()
+            _ => throw new ArgumentOutOfRangeException(nameof(filter))
         };
     }
 
@@ -125,7 +125,7 @@ public static class ColorGenerator
             HueFilter.Blue => (200, 240),
             HueFilter.Purple => (250, 290),
             HueFilter.Magenta => (300, 335),
-            _ => throw new NotImplementedException()
+            _ => throw new ArgumentOutOfRangeException(nameof(filter))
         };
     }
     #endregion

@@ -71,5 +71,15 @@ public static class AssemblyExtensions
 
         return assemblyDirectories;
     }
+    
+    public static string? GetAssemblyProduct(this Type type)
+    {
+        return type.Assembly.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
+    }
+
+    public static string? GetAssemblyVersion(this Type type)
+    {
+        return type.Assembly.GetName().Version?.ToString();
+    }
     #endregion
 }

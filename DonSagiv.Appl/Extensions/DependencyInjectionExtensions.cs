@@ -1,12 +1,13 @@
-﻿using Autofac;
+﻿using System.Reflection;
+using Autofac;
 using Autofac.Builder;
 using Autofac.Extensions.DependencyInjection;
 using Autofac.Features.AttributeFilters;
+using DonSagiv.Domain.DependencyInjection;
 using DonSagiv.Domain.Extensions;
 using Microsoft.Extensions.Hosting;
-using System.Reflection;
 
-namespace DonSagiv.Domain.DependencyInjection;
+namespace DonSagiv.Appl.Extensions;
 
 public static class DependencyInjectionExtensions
 {
@@ -17,7 +18,7 @@ public static class DependencyInjectionExtensions
     {
         hostBuilder.UseServiceProviderFactory(new AutofacServiceProviderFactory(builder =>
         {
-            builderAction?.Invoke(builder);
+            builderAction.Invoke(builder);
             builder.ImportExternalAssemblies(externalPaths);
         }));
 
