@@ -1,9 +1,6 @@
-using System.Text;
-using DonSagiv.Domain.ResultPattern;
-
 namespace DonSagiv.Domain.Entities;
 
-public record struct Version(uint Major, uint Minor, uint Release, uint Build)
+public readonly record struct Version(uint Major, uint Minor, uint Release, uint Build)
 {
     #region Static Methods
     public static Version FromString(string versionStringInput)
