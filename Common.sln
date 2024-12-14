@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DonSagiv.Infrastructure.DataAccess.MongoDb", "src\Infrastructure\DonSagiv.Infrastructure.DataAccess.MongoDb\DonSagiv.Infrastructure.DataAccess.MongoDb.csproj", "{611E4A9A-A575-4CBF-BF8F-C4AA5661BA2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{05A7600F-5DBD-8745-3FE3-231ABAA7C21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05A7600F-5DBD-8745-3FE3-231ABAA7C21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05A7600F-5DBD-8745-3FE3-231ABAA7C21F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{611E4A9A-A575-4CBF-BF8F-C4AA5661BA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{611E4A9A-A575-4CBF-BF8F-C4AA5661BA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{611E4A9A-A575-4CBF-BF8F-C4AA5661BA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{611E4A9A-A575-4CBF-BF8F-C4AA5661BA2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{5316F267-62E4-445C-9CA2-6D6A1DBFED26} = {987369C1-4BE4-4A8C-A222-679B2A72E7EC}
 		{6919834C-06A1-01EE-08A3-BCC61A68282B} = {5316F267-62E4-445C-9CA2-6D6A1DBFED26}
 		{05A7600F-5DBD-8745-3FE3-231ABAA7C21F} = {B40C785C-70B2-45ED-94F9-E0AD4C7B0895}
+		{611E4A9A-A575-4CBF-BF8F-C4AA5661BA2A} = {B1D80A83-60C2-47D9-9AC2-9435ED2132B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CDDAF75-480A-455F-B796-B02F72D17D69}

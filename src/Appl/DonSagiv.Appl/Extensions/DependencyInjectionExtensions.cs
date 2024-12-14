@@ -16,19 +16,32 @@ public static class DependencyInjectionExtensions
         Action<ContainerBuilder> builderAction,
         params string[] externalPaths)
     {
-        hostBuilder.UseServiceProviderFactory(new AutofacServiceProviderFactory(builder =>
+        hostBuilder.UseServiceProviderFactory(new AutofacServiceProviderFactory(cb =>
         {
-            builderAction.Invoke(builder);
-            builder.ImportExternalAssemblies(externalPaths);
+            builderAction.Invoke(cb);
+            cb.ImportExternalAssemblies(externalPaths);
         }));
 
         return hostBuilder;
     }
 
+    public static IHostApplicationBuilder BuildContainers(this IHostApplicationBuilder hostApplicationBuilder,
+        Action<ContainerBuilder> builderAction,
+        params string[] externalPaths)
+    {
+        hostApplicationBuilder.ConfigureContainer(new AutofacServiceProviderFactory(), cb =>
+        {
+            builderAction.Invoke(cb);
+            cb.ImportExternalAssemblies(externalPaths);
+        });
+
+        return hostApplicationBuilder;
+    }
+
     private static void ImportExternalAssemblies(this ContainerBuilder builder,
         params string[] externalPaths)
     {
-
+        
     }
     #endregion
 
@@ -46,7 +59,7 @@ public static class DependencyInjectionExtensions
         where TBase : notnull
         where TDerived : notnull
     {
-        if (!typeof(TDerived).IsAssignableFrom(typeof(TBase)))
+        if (!typeof(TDerived).IsAssignableTo(typeof(TBase)))
         {
             throw new ArgumentException($"Type {typeof(TDerived).Name} is not assignable from Type {typeof(TBase).Name}");
         }

@@ -7,7 +7,7 @@ public interface IResult
     public IError Error { get; }
 }
 
-public interface IResult<TValue>
+public interface IResult<TValue> : IResult
 {
     TValue? Value { get; }
 }

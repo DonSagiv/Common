@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
 	<PropertyGroup>
-		<Version>0.0.0.0</Version>
-		<PackageVersion>0.0.0</PackageVersion>
+		<Version>0.0.0.5</Version>
+		<PackageVersion>$(Version)</PackageVersion>
 		<PackageOutputPath>B:\Github\local.nuget</PackageOutputPath>
 		<Product>DonSagiv.Common</Product>
 	</PropertyGroup>
