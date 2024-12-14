@@ -15,7 +15,10 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="*" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="*" />
-    <PackageReference Include="DonSagiv.Domain" Version="*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\DonSagiv.Domain\DonSagiv.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace DonSagiv.Domain.Extensions;
 
@@ -11,7 +10,7 @@ public static class AssemblyExtensions
     #endregion
 
     #region Static Methods
-    internal static IEnumerable<Assembly> GetAssemblies(Predicate<string>? filter = null, params string[] externalDirectories)
+    public static IEnumerable<Assembly> GetAssemblies(Predicate<string>? filter = null, params string[] externalDirectories)
     {
         if (_assemblyCache is not null)
         {

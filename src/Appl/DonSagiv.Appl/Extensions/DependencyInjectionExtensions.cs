@@ -1,11 +1,12 @@
-﻿using System.Reflection;
-using Autofac;
+﻿using Autofac;
 using Autofac.Builder;
 using Autofac.Extensions.DependencyInjection;
 using Autofac.Features.AttributeFilters;
 using DonSagiv.Domain.DependencyInjection;
 using DonSagiv.Domain.Extensions;
 using Microsoft.Extensions.Hosting;
+using System.Reflection;
+using AssemblyExtensions = DonSagiv.Domain.Extensions.AssemblyExtensions;
 
 namespace DonSagiv.Appl.Extensions;
 
@@ -41,7 +42,16 @@ public static class DependencyInjectionExtensions
     private static void ImportExternalAssemblies(this ContainerBuilder builder,
         params string[] externalPaths)
     {
-        
+        var exportPaths = externalPaths.AddExecutingAssemblyDirectory();
+
+        var assemblies = AssemblyExtensions
+            .GetAssemblies(x => x.Contains("DonSagiv"), exportPaths)
+            .ToArray();
+
+        foreach (var assembly in assemblies)
+        {
+            builder.AddAttributedComponentsFromAssembly(assembly);
+        }
     }
     #endregion
 
