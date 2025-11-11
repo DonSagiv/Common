@@ -20,9 +20,9 @@ internal class MongoDbDatabase(Func<IMongoDbCollection> collectionFactory) : IMo
         _mongoDatabase = mongoDatabaseInput;
     }
 
-    public IResult<IMongoDbCollection<TModel>> GetCollection<TModel>(string collectionName)
+    public IResult<IMongoDbCollection<TModel>> GetCollection<TModel>(string? collectionName)
     {
-        if(_mongoDatabase is null)
+        if (_mongoDatabase is null)
         {
             return Result.Failure<IMongoDbCollection<TModel>>(Error.FromDescription("No Mongo Database could be found."));
         }
@@ -31,14 +31,14 @@ internal class MongoDbDatabase(Func<IMongoDbCollection> collectionFactory) : IMo
 
         var collection = _collectionFactory();
 
-        if(collection is not MongoDbCollection<TModel> collectionImpl)
+        if (collection is not MongoDbCollection<TModel> collectionImpl)
         {
             return Result.Failure<IMongoDbCollection<TModel>>(Error.FromDescription("Incorrect collection type."));
         }
 
         collectionImpl.SetCollection(mongoCollection);
 
-        return Result.Success(collection);
+        return Result.Success(collectionImpl as IMongoDbCollection<TModel>);
     }
     #endregion
 }

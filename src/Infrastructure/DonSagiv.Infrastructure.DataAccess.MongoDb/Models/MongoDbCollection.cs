@@ -13,7 +13,7 @@ public abstract class MongoDbCollection : IMongoDbCollection
 internal class MongoDbCollection<TModel> : MongoDbCollection, IMongoDbCollection<TModel>
 {
     #region Fields
-    private IMongoCollection<TModel> _collection;
+    private IMongoCollection<TModel>? _collection;
     #endregion
 
     #region Methods
