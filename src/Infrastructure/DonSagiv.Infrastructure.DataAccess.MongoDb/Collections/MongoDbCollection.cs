@@ -1,8 +1,7 @@
 ﻿using DonSagiv.Domain.DependencyInjection;
-using DonSagiv.Infrastructure.DataAccess.MongoDb.Interfaces;
 using MongoDB.Driver;
 
-namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Models;
+namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Collections;
 
 public abstract class MongoDbCollection : IMongoDbCollection
 {

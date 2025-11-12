@@ -1,9 +1,9 @@
 ﻿using DonSagiv.Domain.DependencyInjection;
 using DonSagiv.Domain.ResultPattern;
-using DonSagiv.Infrastructure.DataAccess.MongoDb.Interfaces;
+using DonSagiv.Infrastructure.DataAccess.MongoDb.Databases;
 using MongoDB.Driver;
 
-namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Models;
+namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Hosts;
 
 [Export(typeof(IMongoDbHost))]
 internal class MongoDbHost(Func<IMongoDbDatabase> databaseFactory) : IMongoDbHost

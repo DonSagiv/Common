@@ -1,6 +1,7 @@
 ﻿using DonSagiv.Domain.ResultPattern;
+using DonSagiv.Infrastructure.DataAccess.MongoDb.Collections;
 
-namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Interfaces;
+namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Databases;
 
 public interface IMongoDbDatabase
 {
