@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Appl/">
+    <Project Path="src/Appl/DonSagiv.Appl/DonSagiv.Appl.csproj" />
+  </Folder>
+  <Folder Name="/src/Domain/">
+    <Project Path="src/Domain/DonSagiv.Domain/DonSagiv.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="src/Infrastructure/DonSagiv.Infrastructure.DataAccess.MongoDb/DonSagiv.Infrastructure.DataAccess.MongoDb.csproj" />
+  </Folder>
+  <Folder Name="/src/Presentation/" />
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/Domain/">
+    <Project Path="tests/Domain/DonSagiv.Domain.Testing/DonSagiv.Domain.Testing.csproj" />
+  </Folder>
+</Solution>
