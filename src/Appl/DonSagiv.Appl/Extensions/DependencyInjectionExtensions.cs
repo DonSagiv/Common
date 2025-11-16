@@ -2,13 +2,14 @@
 using Autofac.Builder;
 using Autofac.Extensions.DependencyInjection;
 using Autofac.Features.AttributeFilters;
-using DonSagiv.Domain.DependencyInjection;
-using DonSagiv.Domain.Extensions;
+using DonSagiv.Domain.Standard.DependencyInjection;
+using DonSagiv.Domain.Standard.Extensions;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Linq;
 using System.Reflection;
-using AssemblyExtensions = DonSagiv.Domain.Extensions.AssemblyExtensions;
 
-namespace DonSagiv.Appl.Extensions;
+namespace DonSagiv.Appl.Standard.Extensions;
 
 public static class DependencyInjectionExtensions
 {
@@ -65,11 +66,11 @@ public static class DependencyInjectionExtensions
     }
 
     public static void AddSingleton<TBase, TDerived>(this ContainerBuilder builder,
-            object? contractKey = null)
+            object contractKey = null)
         where TBase : notnull
         where TDerived : notnull
     {
-        if (!typeof(TDerived).IsAssignableTo(typeof(TBase)))
+        if (!typeof(TDerived).IsAssignableTo<TBase>())
         {
             throw new ArgumentException($"Type {typeof(TDerived).Name} is not assignable from Type {typeof(TBase).Name}");
         }
@@ -87,7 +88,7 @@ public static class DependencyInjectionExtensions
     }
 
     public static void AddScoped<TBase, TDerived>(this ContainerBuilder builder,
-            object? contractKey = null)
+            object contractKey = null)
         where TBase : notnull
         where TDerived : notnull
     {
@@ -103,7 +104,7 @@ public static class DependencyInjectionExtensions
     }
 
     public static void AddTransient<TBase, TDerived>(this ContainerBuilder builder,
-            object? contractKey = null)
+            object contractKey = null)
         where TBase : notnull
         where TDerived : notnull
     {
@@ -114,7 +115,7 @@ public static class DependencyInjectionExtensions
     public static void AddTransientGeneric(this ContainerBuilder builder,
         Type baseType,
         Type derivedType,
-        object? contractKey = null)
+        object contractKey = null)
     {
         if(!baseType.IsGenericType || !derivedType.IsGenericType)
         {
@@ -169,7 +170,7 @@ public static class DependencyInjectionExtensions
 
     private static IRegistrationBuilder<TDerived, TReflectionActivatorData, TRegistrationStyle> ApplyContract<TDerived, TReflectionActivatorData, TRegistrationStyle>(this IRegistrationBuilder<TDerived, TReflectionActivatorData, TRegistrationStyle> regBuilder,
             Type contractType,
-            object? contractKey = null,
+            object contractKey = null,
             CreationPolicy creationPolicy = CreationPolicy.Transient)
         where TReflectionActivatorData : ReflectionActivatorData
     {

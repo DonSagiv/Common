@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="*" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Domain\DonSagiv.Domain.Standard\DonSagiv.Domain.Standard.csproj" />
+    <ProjectReference Include="..\src\Domain\DonSagiv.Domain.Standard\DonSagiv.Domain.Standard.csproj" />
   </ItemGroup>
 
 </Project>

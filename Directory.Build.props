@@ -1,9 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
+	
 	<PropertyGroup>
 		<Version>0.0.0.5</Version>
 		<PackageVersion>$(Version)</PackageVersion>
 		<PackageOutputPath>B:\Github\local.nuget</PackageOutputPath>
 		<Product>DonSagiv.Common</Product>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="PolySharp" Version="1.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	
 </Project>

@@ -1,5 +1,5 @@
-﻿using DonSagiv.Domain.DependencyInjection;
-using DonSagiv.Domain.ResultPattern;
+﻿using DonSagiv.Domain.Standard.DependencyInjection;
+using DonSagiv.Domain.Standard.ResultPattern;
 using DonSagiv.Infrastructure.DataAccess.MongoDb.Collections;
 using MongoDB.Driver;
 

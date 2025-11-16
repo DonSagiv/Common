@@ -4,10 +4,11 @@
   </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/Appl/">
-    <Project Path="src/Appl/DonSagiv.Appl/DonSagiv.Appl.csproj" />
+    <Project Path="src/Appl/DonSagiv.Appl/DonSagiv.Appl.Standard.csproj" />
   </Folder>
   <Folder Name="/src/Domain/">
-    <Project Path="src/Domain/DonSagiv.Domain/DonSagiv.Domain.csproj" />
+    <Project Path="DonSagiv.Domain.Core/DonSagiv.Domain.Core.csproj" Id="d3343dc6-d036-4772-b489-9864b8a2fbd4" />
+    <Project Path="src/Domain/DonSagiv.Domain.Standard/DonSagiv.Domain.Standard.csproj" />
   </Folder>
   <Folder Name="/src/Infrastructure/">
     <Project Path="src/Infrastructure/DonSagiv.Infrastructure.DataAccess.MongoDb/DonSagiv.Infrastructure.DataAccess.MongoDb.csproj" />

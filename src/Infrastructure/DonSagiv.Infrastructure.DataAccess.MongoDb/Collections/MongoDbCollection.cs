@@ -1,4 +1,4 @@
-﻿using DonSagiv.Domain.DependencyInjection;
+﻿using DonSagiv.Domain.Standard.DependencyInjection;
 using MongoDB.Driver;
 
 namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Collections;

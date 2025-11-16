@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="*" />
+    <PackageReference Include="MediatR" Version="12.*" />
+    <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="12.*" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="*" />
+
+    <PackageReference Include="System.Reactive" Version="*" />
+    <PackageReference Include="Ulid" Version="*" />
+  </ItemGroup>
+
+</Project>
