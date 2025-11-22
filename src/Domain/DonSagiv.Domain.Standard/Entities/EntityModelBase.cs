@@ -10,3 +10,8 @@ public abstract class EntityModelBase : IEntityModel
     public DateTime LastSavedDate { get; set; }
     public Version LastVersion { get; set; }
 }
+
+public abstract class EntityModel<TModel> : EntityModelBase, IEntityModel<TModel>
+{
+    public TModel Model { get; set; }
+}

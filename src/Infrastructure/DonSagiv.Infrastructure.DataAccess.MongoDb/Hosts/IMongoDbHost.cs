@@ -3,7 +3,7 @@ using DonSagiv.Infrastructure.DataAccess.MongoDb.Databases;
 
 namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Hosts;
 
-internal interface IMongoDbHost
+public interface IMongoDbHost : IRepositoryHost
 {
     IResult<IMongoDbDatabase> GetDatabase(string databaseName);
 }

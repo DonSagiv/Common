@@ -10,10 +10,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="PolySharp" Version="1.15.0">
+		<PackageReference Include="PolySharp" Version="*">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="*" />
 	</ItemGroup>
 	
 </Project>

@@ -4,7 +4,7 @@ namespace DonSagiv.Domain.Standard.DependencyInjection;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
 public class ExportAttribute(Type contractType,
-    object? contractKey = null,
+    object contractKey = null,
     CreationPolicy creationPolicy = CreationPolicy.Transient) : Attribute
 {
     #region Properties

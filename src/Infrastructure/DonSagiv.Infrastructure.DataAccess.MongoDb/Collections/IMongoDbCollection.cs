@@ -1,5 +1,9 @@
-﻿namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Collections;
+﻿using DonSagiv.Appl.Standard.DataAccess;
+using DonSagiv.Domain.Standard.Entities;
 
-public interface IMongoDbCollection;
+namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Collections;
 
-public interface IMongoDbCollection<TModel> : IMongoDbCollection;
+public interface IMongoDbCollection : IRepositorySet;
+
+public interface IMongoDbCollection<TEntityModel> : IMongoDbCollection, IRepositorySet<TEntityModel>
+    where TEntityModel : IEntityModel;

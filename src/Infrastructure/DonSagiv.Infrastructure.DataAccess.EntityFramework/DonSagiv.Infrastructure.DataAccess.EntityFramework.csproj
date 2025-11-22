@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Appl\DonSagiv.Appl.Standard\DonSagiv.Appl.Standard.csproj" />
-    <ProjectReference Include="..\..\Domain\DonSagiv.Domain.Standard\DonSagiv.Domain.Standard.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Hosts\" />
   </ItemGroup>
 
 </Project>
