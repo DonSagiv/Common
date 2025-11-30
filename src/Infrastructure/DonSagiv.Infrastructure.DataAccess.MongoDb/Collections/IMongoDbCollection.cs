@@ -1,4 +1,4 @@
-﻿using DonSagiv.Appl.Standard.DataAccess;
+﻿using DonSagiv.Appl.DataAccess.RepositorySets;
 using DonSagiv.Domain.Standard.Entities;
 
 namespace DonSagiv.Infrastructure.DataAccess.MongoDb.Collections;

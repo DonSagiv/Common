@@ -9,8 +9,6 @@ namespace DonSagiv.Appl.DataAccess.RepositorySets;
 public interface IRepositorySet
 {
     string SetName { get; }
-
-    Task<IResult> DeleteAsync(Ulid token);
 }
 
 public interface IRepositorySet<TEntityModel> : IRepositorySet
@@ -18,5 +16,6 @@ public interface IRepositorySet<TEntityModel> : IRepositorySet
 {
     Task<IResult> AppendAsync(TEntityModel entityModelInput);
     Task<IResult<TEntityModel>> ReadAsync(Ulid token);
+    Task<IResult> DeleteAsync(Ulid token);
     IAsyncEnumerable<TEntityModel> AsQueryable();
 }

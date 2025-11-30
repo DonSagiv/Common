@@ -1,4 +1,4 @@
-﻿using DonSagiv.Appl.Standard.DataAccess;
+﻿using DonSagiv.Appl.DataAccess.RepositorySets;
 using DonSagiv.Domain.Standard.DependencyInjection;
 using DonSagiv.Domain.Standard.Entities;
 using DonSagiv.Domain.Standard.ResultPattern;
@@ -17,7 +17,7 @@ internal class MongoDbDatabase(Func<IMongoDbCollection> collectionFactory) : IMo
     #endregion
 
     #region Properties
-    public string RepositoryName { get; set; }
+    public required string RepositoryName { get; set; }
     #endregion
 
     #region Methods

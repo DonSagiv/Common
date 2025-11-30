@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace DonSagiv.Domain.Standard.ResultPattern;
@@ -59,6 +60,11 @@ public class Result : IResult
     public static IResult<TValue> Failure<TValue>(IError error, TValue? valueInput = default)
     {
         return new Result<TValue>(valueInput, false, error);
+    }
+
+    public static IResult<TValue> Failure<TValue>(string description, TValue? valueInput = default)
+    {
+        return Failure(ResultPattern.Error.FromDescription(description), valueInput);
     }
 
     public static IResult<TValue> Failure<TValue>(Exception exception, TValue? valueInput = default)

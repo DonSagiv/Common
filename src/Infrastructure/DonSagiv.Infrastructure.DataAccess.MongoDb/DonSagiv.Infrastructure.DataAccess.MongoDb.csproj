@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Appl\DonSagiv.Appl.DataAccess\DonSagiv.Appl.DataAccess.csproj" />
     <ProjectReference Include="..\..\Appl\DonSagiv.Appl.Standard\DonSagiv.Appl.Standard.csproj" />
     <ProjectReference Include="..\..\Domain\DonSagiv.Domain.Standard\DonSagiv.Domain.Standard.csproj" />
   </ItemGroup>

@@ -24,17 +24,17 @@ public static class ResultExtensions
         return new Result(sourceResult.IsSuccess, sourceResult.Error);
     }
 
-    public static IResult ToResult<TValue>(this IResult resultInput, TValue? valueInput = default)
+    public static IResult<TValue> ToResult<TValue>(this IResult resultInput, TValue? valueInput = default)
     {
         return new Result<TValue>(valueInput, resultInput.IsSuccess, resultInput.Error);
     }
 
-    public static Task<IResult> Async(this IResult sourceResult)
+    public static Task<IResult> AsTask(this IResult sourceResult)
     {
         return Task.FromResult(sourceResult);
     }
 
-    public static Task<IResult<TValue>> Async<TValue>(this IResult<TValue> sourceResult)
+    public static Task<IResult<TValue>> AsTask<TValue>(this IResult<TValue> sourceResult)
     {
         return Task.FromResult(sourceResult);
     }
